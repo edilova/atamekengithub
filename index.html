@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ATAMEKEN</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+
+    <!--Google map-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=29e99144-3bdb-4a20-a7ee-fcf42881c7bf" type="text/javascript"></script>
+
+
+    <!-- Custom styles for this template -->
+    <link href="style/scrolling-nav.scss" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" ng-app="showdemo" ng-controller="ShowController">
+
+<div class="d-flex flex-column align-items-center justify-content-center text-center" id="topheader">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg p-0 ">
+        <img src="images/Icon/MA_Logo.svg" alt="" width="140">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><img src="images/Icon/nav.svg" alt="" width="30"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <!--<li class="active">-->
+                <!--<a href="#home">home<span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <li class="nav-item active">
+                    <a class="nav-link js-scroll-trigger text-red px-0" ng-click="name = 'main'">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger px-0" ng-click="name = 'about'">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger px-0" ng-click="name = 'projects'">Проекты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger px-0" ng-click="name = 'news'">Новости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger px-0" ng-click="name = 'partners'">Партнеры</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger px-0" ng-click="name = 'contacts'">Контакты</a>
+                </li>
+            </ul>
+            <form class="d-md-none d-sm-flex form-inline my-2 my-lg-0">
+                <button class="sign-in-btn " type="submit">Войти</button>
+            </form>
+        </div>
+        <form class="d-none d-md-flex form-inline my-2 my-lg-0">
+            <button class="sign-in-btn " type="submit">Войти</button>
+        </form>
+    </nav>
+</div>
+
+
+
+<div ng-switch="name">
+    <div ng-switch-when="main">
+        <!--WHEN MAIN CLICKED-->
+        <div>
+            <!-- First main block-->
+            <div class="main-block d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                <video class="video" autoplay muted loop>
+                    <source src="images/video.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+
+                <!--for main block-->
+                <h1>БИЗНЕС, КОТОРОМУ НЕ ВСЕ РАВНО</h1>
+                <p>Мы помогаем бизнесу стать социально ответсвенным.<br>
+                    Ни одно доброе дело не останется незамеченным.</p>
+
+                <button ng-show="main" class="main-btn my-2 my-sm-0 px-3" type="submit"><img class="mr-2" src="images/Icon/play-button.svg" alt="" width="15">Посмотреть видео</button>
+            </div>
+
+            <!--about us block-->
+            <div class="about-block d-flex flex-column align-items-center">
+                <h1>О НАС</h1>
+                <p>Основная направленность ОО «Менің Атамекенім»</p>
+                <div class="about-content d-sm-flex flex-md-row flex-sm-column w-100 container">
+                    <div class="d-flex justify-content-center align-items-start col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture1.svg" alt="" width="100%" height="100%">
+                    </div>
+                    <div class="col-md-6 col-sm-12 pl-md-5 pl-sm-0 mt-4">
+                        <div>
+                            <p class="text-title mb-2">Миссия</p>
+                            <p class="text-content mb-4">Привлечь общество к модернизации социальной среды сельских территорий в ответ на инициативу Главы государства.</p>
+                        </div>
+                        <div>
+                            <p class="text-title mb-2">Цель</p>
+                            <p class="text-content mb-4">Организация мероприятий по повышению качества жизни населения через развитие институтов меценатства, благотворительности и корпоративного волонтерства.</p>
+                        </div>
+                        <div>
+                            <p class="text-title mb-2">Задачи</p>
+                            <p class="text-content mb-4">Создание  платформы для диалога между всеми заинтересованными сторонами общества и принятия совместных решений.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--strategy block-->
+            <div class="strategy d-flex flex-column align-items-center">
+                <h1><span>СТРАТЕГИЧЕСКИЕ </span> НАПРАВЛЕНИЯ</h1>
+                <p class="text-center">развития ОО «Менің Атамекенім» для повышения качества жизни</p>
+                <div class="strategy-content d-md-flex d-sm-flex flex-md-row flex-sm-column text-center w-100 container">
+                    <div class="col-md-4 col-sm-12">
+                        <img src="images/Icon/save-money.svg" alt="" width="70">
+                        <p class="text-title mt-4">Институт меценатства</p>
+                        <p class="text-content m-auto">Формирование культуры меценатства среди предпринимателей, развитие социального
+                            предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <img src="images/Icon/team.svg" alt="" width="70">
+                        <p class="text-title mt-4">Благотворительность и<br> корпоративное волонтерство </p>
+                        <p class="text-content m-auto">Развитие благотворительности и корп.волонтерства посредством привлечения к организации мероприятий по повышению качества жизни сельского населения</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <img src="images/Icon/team.svg" alt="" width="70">
+                        <p class="text-title mt-4">Корпоративная социальная ответственность</p>
+                        <p class="text-content m-auto">Разработка предложений по экономическим и неэкономическим инструментами стимулирования бизнеса к появлению КСО.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--best companies block-->
+            <div class="companies-block d-flex flex-column align-items-center">
+                <h1><span>ЛУЧШИЕ </span> КОМПАНИИ</h1>
+                <p class="text-center">Лучшие социально ориентированные компании</p>
+                <div class="about-content d-flex flex-row w-100 container">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="d-flex flex-row align-items-start justify-content-start">
+                            <img src="images/Icon/automato%20logo.svg" alt="">
+                            <div class="pl-3">
+                                <p class="text-title m-0">TOO «AUTOMATO»</p>
+                                <p class="text-content">IT-компания</p>
+                                <div class="d-flex h-auto align-items-center">
+                                    <div class="stars d-flex">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                    </div>
+                                    <p class="d-flex align-items-center m-0 pl-1">5.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-start justify-content-start mt-5">
+                            <img src="images/Icon/automato%20logo.svg" alt="">
+                            <div class="pl-3">
+                                <p class="text-title m-0">TOO «САТТИ ТЕЛЕКОМ»</p>
+                                <p class="text-content">Телекоммуникации и связь</p>
+                                <div class="d-flex h-auto align-items-center">
+                                    <div class="stars d-flex">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                    </div>
+                                    <p class="d-flex align-items-center m-0 pl-1">5.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-start justify-content-start mt-5">
+                            <img src="images/Icon/automato%20logo.svg" alt="">
+                            <div class="pl-3">
+                                <p class="text-title m-0">TOO «КАЗМУНАЙГАЗ»</p>
+                                <p class="text-content">Природные ископаемые</p>
+                                <div class="d-flex h-auto align-items-center">
+                                    <div class="stars d-flex">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                        <img class="mr-1" src="images/Icon/Star.svg" alt="" width="15" height="15">
+                                    </div>
+                                    <p class="d-flex align-items-center m-0 pl-1">5.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-block-btn">
+                            <button class="mt-5">Показать все компании</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture2.svg" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+
+            <!--our projects-->
+            <div class="our-project-block d-flex flex-column align-items-center">
+                <h1><span>НАШИ </span> ПРОЕКТЫ</h1>
+                <p class="text-center">Мы гордимся тем, что делаем, и всегда рады новым участникам</p>
+                <div class="strategy-content d-md-flex d-sm-flex flex-md-row flex-sm-column text-center justify-content-center w-100">
+                    <div class="col-md-4 col-sm-12">
+                        <img src="images/Icon/yurt.svg" alt="" width="70">
+                        <p class="text-title mt-4">Әр ауылға — бiр қамкоршы</p>
+                        <p class="text-content m-auto">Основная цель проекта - развитие меценатства как инструмента поддержки аулов по всей стране</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <img src="images/Icon/team.svg" alt="" width="70">
+                        <p class="text-title mt-4">Реестр социально<br> отвественного бизнеса</p>
+                        <p class="text-content m-auto">Программа направлена на реализацию политики корпоративной социальной отвественности (КСО)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--latest news block-->
+            <div class="latest-news-block d-flex flex-column align-items-center">
+                <h1>ПОСЛЕДНИЕ <span>НОВОСТИ</span> </h1>
+                <p class="text-center">Мы гордимся тем, что делаем, и всегда рады новым участникам</p>
+                <div class="news-content d-sm-flex d-md-flex flex-md-row flex-sm-column text-center mt-5 container">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="news-frame text-left">
+                            <img src="images/Icon/news.jpg" alt="" width="100%" height="200">
+                            <div class="p-3">
+                                <p class="text-title">Феномен КСО или что может побудить бизнес быть</p>
+                                <p class="text-content text-justify m-0 truncate" >Тема корп.социальной ответственности уже не первое
+                                десятилетие обсуждается и изучается бизнес-сообществом на Западе, а также значительно  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus, recusandae.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-4">
+                                    <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="news-frame text-left">
+                            <img src="images/Icon/news1.jpeg" alt="" width="100%" height="200">
+                            <div class="p-3">
+                                <p class="text-title">Лучшего дворника выберут в г.Алматы</p>
+                                <p class="text-content text-justify m-0 truncate" >Алматинцы открытым голосованием определяет 30 финалистов
+                                    из более 200 участвующих, передает корреспондент BNews.kz Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus, recusandae.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-4">
+                                    <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="news-frame text-left">
+                            <img src="images/Icon/news2.jpeg" alt="" width="100%" height="200">
+                            <div class="p-3">
+                                <p class="text-title">Может ли КСО поднять Казахстан в рейтинге Doing...</p>
+                                <p class="text-content text-justify m-0 truncate">За последний год Казахстану удалось на 16
+                                    пунктов улучшить свою позицию в международном рейтинге оценки ведения бизнеса Doing Business с 51 места
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus, recusandae.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-4">
+                                    <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="show-news">Показать все новости</button>
+            </div>
+
+            <!--partners block-->
+            <div class="supported d-flex flex-column align-items-center">
+                <h1>НАС <span>ПОДДЕРЖАЛИ</span> </h1>
+                <p class="text-center">Компании, инициирующие изменения в сфере социального бизнеса</p>
+                <div class="supported-img d-md-flex d-sm-flex flex-md-row flex-sm-column justify-content-around w-75">
+                    <img src="images/Icon/profile.svg" alt="" width="100">
+                    <img src="images/Icon/profile.svg" alt="" width="100">
+                    <img src="images/Icon/profile.svg" alt="" width="100">
+                    <img src="images/Icon/profile.svg" alt="" width="100">
+                </div>
+            </div>
+
+
+            <!--ready to help? block-->
+            <div class="help-block d-flex align-items-center justify-content-center p-0">
+                <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column align-items-center container">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="help-mobile w-100">
+                            <h1>ГОТОВЫ <span>ПОМОЧЬ?</span> </h1>
+                            <p class="help-text text-md-left text-sm-center">Решение помочь как материально, так и<br> своими услугами высоко ценится<br> обществом и вознаграждается.</p>
+                            <button class="help-btn mt-4 m-auto">Хочу помочь</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture3.svg" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div ng-switch-when="about">
+        <!--WHEN ABOUT US CLICKED-->
+        <div>
+            <!-- First main block-->
+            <div class="main-block d-flex flex-column align-items-center justify-content-center text-center">
+
+
+                <video class="video" autoplay muted loop>
+                    <source src="images/video.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+
+                <!--for about us block-->
+                <h1>О НАС</h1>
+                <p>ОО «Менің Атамекенім» оссуществляет проекты, направленные на<br>
+                    формирование культуры благотворительности и меценатства среди<br>
+                    предпринимателей</p>
+            </div>
+            <div class="block-1 d-flex justify-content-center">
+                <div class=" d-md-flex d-sm-flex flex-md-row flex-sm-column align-items-center w-100 container">
+                    <div class="col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture6.svg" alt="" width="100%" height="100%">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="w-75">
+                            <p class="block-title">МИССИЯ</p>
+                            <p class="block-content">Привлеч общество к модернизации<br>
+                                социальной среды сельских территорий в<br>
+                                ответ на инициативу Главы государства.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-2 d-flex justify-content-center">
+                <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column align-items-center w-100 container">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="w-75">
+                            <p class="block-title">ЦЕЛЬ</p>
+                            <p class="block-content">Организация мероприятий по повышению<br>
+                                качества жизни населения через развитие<br>
+                                институтов меценатства,<br>
+                                волонтерства.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture5.svg" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="block-3 d-flex justify-content-center">
+                <div class=" d-md-flex d-sm-flex flex-md-row flex-sm-column align-items-center w-100 container">
+                    <div class="col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture4.svg" alt="" width="100%" height="100%">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="w-75">
+                            <p class="block-title">ЗАДАЧИ</p>
+                            <p class="block-content">Создание платформы для диалога между<br>
+                                всеми заинтересованными сторонами<br>
+                                общества и принятия совместных решений.</p>
+                            <p class="block-content">Формирование портфеля проектов по<br>
+                                приоритетным направлениям</p>
+                            <p class="block-content">Разработка и практическое внедрение<br>
+                                инструментов и прозрачных механизмов<br>
+                                реализаций проектов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-4 d-flex justify-content-center pb-5">
+                <div class=" d-md-flex d-sm-flex flex-column align-items-center w-100">
+                    <h1><span> УЧРЕДИТЕЛИ ОО  </span> «МЕНІҢ АТАМЕКЕНІМ»</h1>
+                    <p class="text-center">Предприниматели, общественные деятели, представители НПП <br> «Атамекен», внедряющие принципы КСО. </p>
+                    <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column mt-4 container">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="profile d-flex flex-row align-items-start p-4">
+                                <img src="images/Icon/profile.svg" alt="" width="80">
+                                <div class="ml-4">
+                                    <p class="name">Ушкемпиров Жаксылык Амиралыулы</p>
+                                    <p class="origin">Алматинская область</p>
+                                    <p class="position">Предприниматель, общественный деятель,<br> руководитель хозяйства «Жаксылык»</p>
+                                </div>
+                            </div>
+                            <div class="profile d-flex flex-row align-items-start p-4 mt-4">
+                                <img src="images/Icon/profile.svg" alt="" width="80">
+                                <div class="ml-4">
+                                    <p class="name">Байнешов Алибек Муктарович</p>
+                                    <p class="origin">Алматинская область</p>
+                                    <p class="position">Предприниматель, генеральный директор ТОО,
+                                        «Synergy Consulting Group». Консультирование по
+                                        вопросам коммерческой деятельности и управления</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="profile d-flex flex-row align-items-start p-4">
+                                <img src="images/Icon/profile.svg" alt="" width="80">
+                                <div class="ml-4">
+                                    <p class="name">Абасов Кайнар Бегалиевич</p>
+                                    <p class="origin">Южно-Казахстанская область</p>
+                                    <p class="position">Предприниматель, директор ТОО,
+                                        «Хлопкопром-Целлюлоза». Производство хлопковой
+                                        целлюлозы, гигроскопической ваты и технической
+                                        карбоксиметил целлюлозы
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="profile d-flex flex-row align-items-start p-4 mt-4">
+                                <img src="images/Icon/profile.svg" alt="" width="80">
+                                <div class="ml-4">
+                                    <p class="name">Божбанов Мадениет Танатович</p>
+                                    <p class="origin">Карагандинская область</p>
+                                    <p class="position">Предприниматель, руководитель ТОО «Торговый дом
+                                       холдинг «Алтын-Арна». Производство
+                                        полиэтиленовой продукции, геомембранных и
+                                        геосинтетических материалов.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="shomore mt-5">Показать еще</button>
+                </div>
+            </div>
+            <!--ready to help? block-->
+            <div class="help-block d-flex align-items-center justify-content-center p-0">
+                <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column align-items-center container">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="help-mobile w-100">
+                            <h1>ГОТОВЫ <span>ПОМОЧЬ?</span> </h1>
+                            <p class="help-text text-md-left text-sm-center">Решение помочь как материально, так и<br> своими услугами высоко ценится<br> обществом и вознаграждается.</p>
+                            <button class="help-btn mt-4 m-auto">Хочу помочь</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="" src="images/Picture/Picture3.svg" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="projects">
+        <!--WHEN PROJECTS US CLICKED-->
+        <div>
+            <div class="for-white-content d-md-flex d-sm-none w-100"></div>
+            <div class="projects d-flex justify-content-center">
+                <div class=" d-md-flex d-sm-flex flex-md-column flex-sm-column align-items-start w-100 container">
+                    <div class="path d-flex flex-row">
+                        <p>Главная</p>
+                        <div class="line-in-path mx-3"></div>
+                        <p>Проекты</p>
+                        <div class="line-in-path mx-3"></div>
+                        <p>Әр ауылға - бiр қамкоршы?</p>
+                    </div>
+                    <h1 class="text-uppercase my-5"><span>Әр ауылға - </span>бiр қамкоршы? </h1>
+                    <p class="text-content">На данный момент в сельской местности проживает почти половина населения Казахстана.
+                        При этом оснащенность социальными благами, работой, возможностями для саморазвития на селе существенно ниже, чем в городах<br><br>
+                        Без эффективных механизмов повышения социально-экономического уровня села невозможно устойчивое развитие страны
+                        в целом. Программа «ӘР АУЫЛҒА БІР ҚАМҚОРШЫ» нацелена на развитие меценатства как инструмент поддержки развития ауылов
+                    </p>
+                    <div class="w-100 mt-5">
+                        <p class="text-title">
+                            Поиск пакетов по названию аула
+                        </p>
+                        <div class="w-100">
+                            <div class="input-group mb-3 ">
+                                <div class="input-group-prepend dropdown">
+                                    <button class="w-100 btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Алматы</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                    <img class="mr-3" l src="images/Icon/angle-arrow-down.svg" alt="" width="15" height="60">
+                                </div>
+                                <div class="input-group-search d-flex flex-row">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text pl-4" id="basic-addon1">
+                                             <img src="images/Icon/musica-searcher.svg" alt="" width="15">
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Введите название аула">
+                                    <div class="input-group-prepend find-input">
+                                        <img src="images/Icon/place.svg" alt="" width="15" height="60">
+                                        <span class="input-group-text2 pl-2 d-flex align-items-center" id="basic-addon">
+                                            На карте
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn-find w-100 btn-outline-secondary" type="button">Найти</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column mt-5">
+                            <div class="col-md-3 col-sm-12 pl-0 pad-for-mobile">
+                                <p class="text-fiter-grey">Фильтры</p>
+                                <div class="filter-frame">
+                                    <div class="filter-frame-blocks container">
+                                        <p class="text-title-small">Категория</p>
+                                        <div class="input-group-prepend dropdown-cat w-100">
+                                            <button class="w-100 btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Спорт</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <div role="separator" class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                            <img class="mr-3" l src="images/Icon/angle-arrow-down.svg" alt="" width="15" height="60">
+                                        </div>
+                                    </div>
+                                    <div class="filter-frame-blocks container">
+                                        <p class="text-title-small">По стоимости</p>
+                                        <div class="input-group-prepend dropdown-cat w-100">
+                                            <button class="w-100 btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">От</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <div role="separator" class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                            <img class="mr-3" l src="images/Icon/angle-arrow-down.svg" alt="" width="15" height="60">
+                                        </div>
+                                        <div class="input-group-prepend dropdown-cat w-100 mt-2">
+                                            <button class="w-100 btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">До</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <div role="separator" class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                            <img class="mr-3" l src="images/Icon/angle-arrow-down.svg" alt="" width="15" height="60">
+                                        </div>
+                                    </div>
+                                    <div class="filter-frame-blocks container">
+                                        <p class="text-title-small">Количество жителей</p>
+                                        <form>
+                                            <div>
+                                                <input type="radio" name="gender" value="male" checked><span class="text-fiter"> от 500 - 1 000</span><br>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="gender" value="female"><span class="text-fiter"> от 1 000 - 2 000</span><br>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="gender" value="other"> <span class="text-fiter">от 2 000 - 5 000</span>
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                    <div class="filter-frame-blocks container">
+                                        <button class="filter-btn w-100 my-2">Фильтровать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-sm-12 pr-0 pad-for-mobile">
+                                <div class="d-flex flex-row">
+                                    <div class="col-md-6 col-sm-12"><p class="text-fiter-grey">Пакетные предложения(27)</p></div>
+                                    <div class="col-md-6 col-sm-12 none-when-mob"><p class="text-fiter-grey">Необходимая сумма</p></div>
+                                </div>
+                                <div class="filter-frame2 d-md-flex d-sm-flex flex-md-row flex-sm-column mb-4"  ng-repeat="sug in suggestions">
+                                    <div class="sug-img d-flex align-items-center">
+                                        <img class="p-2" src="{{sug.img}}" alt="" width="70" height="70">
+                                    </div>
+                                    <div class="sug-content">
+                                        <p class="text-title mb-2">{{sug.title}}</p>
+                                        <p class="text-title2 m-0">{{sug.place}}</p>
+                                        <div class="d-flex flex-row align-items-center">
+                                            <img src="images/Icon/place.svg" alt="" width="15" height="15">
+                                            <span class="pl-2 d-flex align-items-center" id="basic-addon">
+                                            Посмотреть на карте
+                                        </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="sug-cost d-flex justify-content-start align-items-center">
+                                        <p class="m-0">{{sug.cost}}</p>
+                                    </div>
+                                    <div class="sug-btn d-flex justify-content-end align-items-center">
+                                        <button class="border-0">Подробнее</button>
+                                    </div>
+                                </div>
+                                <div class="pagination d-flex justify-content-center mt-5">
+                                    <a href="#">&laquo;</a>
+                                    <a class="p-auto text-center" href="#">1</a>
+                                    <a class="active-news" href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">&raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-line w-100"></div>
+    </div>
+    <div ng-switch-when="news">
+        <!-- First main block-->
+        <div class="main-block d-flex flex-column align-items-center justify-content-center text-center">
+            <video class="video" autoplay muted loop>
+                <source src="images/video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <!--for main block-->
+            <h1>НОВОСТИ</h1>
+            <p>Оставайтесь всегда в курсе и действуйте, тогда мы расскажем и о вас. <br>
+            Последние события из сферы бизнеса и анонс событий.</p>
+        </div>
+        <div class="news d-flex flex-row align-items-center justify-content-center"  ng-controller="ShowController2">
+            <div class=" d-sm-flex flex-md-row flex-sm-column w-100 container" ng-switch="newsblock">
+                <div ng-switch-when="all" class="d-flex flex-column justify-content-start align-items-start col-md-8 col-sm-12">
+                    <p class="news-title">СМИ о нас</p>
+                    <div class="w-100">
+                        <div class="news-frame text-left">
+                            <img src="images/Icon/news.jpg" alt="" width="100%">
+                            <div class="p-4">
+                                <p ng-click="newsblock = 'one'" class="text-title">Феномен КСО или что может побудить бизнес быть</p>
+                                <p class="text-content text-justify m-0 truncate" >Тема корп.социальной ответственности уже не первое
+                                    десятилетие обсуждается и изучается бизнес-сообществом на Западе, а также значительно  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus, recusandae.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-3">
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column mt-4">
+                            <div class="col-md-6 col-sm-12 pl-md-0 pad-for-mobile">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news1.jpeg" alt="" width="100%" height="200">
+                                    <div class="p-3">
+                                        <p class="text-title">Феномен КСО или что может побудить бизнес быть</p>
+                                        <p class="text-content text-justify m-0 truncate" >Тема корп.социальной ответственности уже не первое
+                                            десятилетие обсуждается и изучается бизнес-сообществом на Западе, а также значительно  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Accusamus, recusandae.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-4">
+                                            <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 pr-0 pad-for-mobile">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news2.jpeg" alt="" width="100%" height="200">
+                                    <div class="p-3">
+                                        <p class="text-title">Феномен КСО или что может побудить бизнес быть</p>
+                                        <p class="text-content text-justify m-0 truncate" >Тема корп.социальной ответственности уже не первое
+                                            десятилетие обсуждается и изучается бизнес-сообществом на Западе, а также значительно  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Accusamus, recusandae.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-4">
+                                            <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <div class="d-md-flex d-sm-flex flex-md-row flex-sm-column mt-4">
+                            <div class="col-md-6 col-sm-12 pl-md-0 pad-for-mobile">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news1.jpeg" alt="" width="100%" height="200">
+                                    <div class="p-3">
+                                        <p class="text-title">Феномен КСО или что может побудить бизнес быть</p>
+                                        <p class="text-content text-justify m-0 truncate" >Тема корп.социальной ответственности уже не первое
+                                            десятилетие обсуждается и изучается бизнес-сообществом на Западе, а также значительно  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Accusamus, recusandae.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-4">
+                                            <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 pr-0 pad-for-mobile">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news2.jpeg" alt="" width="100%" height="200">
+                                    <div class="p-3">
+                                        <p class="text-title">Феномен КСО или что может побудить бизнес быть</p>
+                                        <p class="text-content text-justify m-0 truncate" >Тема корп.социальной ответственности уже не первое
+                                            десятилетие обсуждается и изучается бизнес-сообществом на Западе, а также значительно  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Accusamus, recusandae.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-4">
+                                            <p><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination d-flex justify-content-center mt-5 mb-4">
+                            <a href="#">&laquo;</a>
+                            <a class="p-auto text-center" href="#">1</a>
+                            <a class="active-news" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="one" class="d-flex flex-column justify-content-start align-items-start col-md-8 col-sm-12">
+                    <p class="news-title">СМИ о one</p>
+                    <div class="">
+                        <div class="news-frame text-left">
+                            <img src="images/Icon/news.jpg" alt="" width="100%">
+                            <div class="p-4">
+                                <p class="text-title">Институт меценатства</p>
+                                <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                    предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-3">
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-md-6 col-sm-12 pl-0">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news.jpg" alt="" width="100%">
+                                    <div class="p-4">
+                                        <p class="text-title">Институт меценатства</p>
+                                        <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                            предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-3">
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 pr-0">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news.jpg" alt="" width="100%">
+                                    <div class="p-4">
+                                        <p class="text-title">Институт меценатства</p>
+                                        <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                            предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-3">
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="d-flex flex-row">
+                            <div class="col-md-6 col-sm-12 pl-0">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news.jpg" alt="" width="100%">
+                                    <div class="p-4">
+                                        <p class="text-title">Институт меценатства</p>
+                                        <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                            предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-3">
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 pr-0">
+                                <div class="news-frame text-left">
+                                    <img src="images/Icon/news.jpg" alt="" width="100%">
+                                    <div class="p-4">
+                                        <p class="text-title">Институт меценатства</p>
+                                        <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                            предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                        <div class="comments d-flex flex-row justify-content-between mt-3">
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                            <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination d-flex justify-content-center mt-5">
+                            <a href="#">&laquo;</a>
+                            <a class="p-auto text-center" href="#">1</a>
+                            <a class="active-news" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p class="news-title">Анонсы</p>
+                    <div class="anons">
+                        <div class="news-frame-anons text-left">
+                            <div class="p-4">
+                                <p class="text-title">Институт меценатства</p>
+                                <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                    предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-3">
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-frame-anons text-left">
+                            <div class="p-4">
+                                <p class="text-title">Институт меценатства</p>
+                                <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                    предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-3">
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-frame-anons text-left">
+                            <div class="p-4">
+                                <p class="text-title">Институт меценатства</p>
+                                <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                    предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-3">
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-frame-anons text-left">
+                            <div class="p-4">
+                                <p class="text-title">Институт меценатства</p>
+                                <p class="text-content text-justify m-0">Формирование культуры меценатства среди предпринимателей, развитие социального
+                                    предпринимательства и КСО, посредством осуществления специальных проектов.</p>
+                                <div class="comments d-flex flex-row justify-content-between mt-3">
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/chat.svg" alt="" width="12"> 5 комментариев</p>
+                                    <p class="mb-0"><img class="stars mr-1" src="images/Icon/calendar.svg" alt="" width="12"> 29.09.18</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-line w-100"></div>
+    </div>
+    <div ng-switch-when="partners">
+        <div>
+            <div class="for-white-content d-md-flex d-sm-none w-100"></div>
+        </div>
+    </div>
+    <div ng-switch-when="contacts">
+        <!-- First main block-->
+        <div class="main-block d-flex flex-column align-items-center justify-content-center text-center">
+
+
+            <video class="video" autoplay muted loop>
+                <source src="images/video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <!--for main block-->
+            <h1>СВЯЗАТЬСЯ С НАМИ</h1>
+            <p>Мы доступны через социальные сети и не только</p>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="contacts-social d-flex justify-content-center align-items-center">
+                    <a class="d-flex justify-content-center align-items-center" href="https://www.facebook.com/atamekenim/"><img src="images/Icon/facebook.svg" alt="" width="17"></a>
+                </div>
+                <div class="contacts-social d-flex justify-content-center align-items-center">
+                    <a class="d-flex justify-content-center align-items-center" href="https://www.instagram.com/atamekenim_kz/"><img src="images/Icon/instagram.svg" alt="" width="17"></a>
+                </div>
+                <div class="contacts-social d-flex justify-content-center align-items-center">
+                    <a class="d-flex justify-content-center align-items-center" href="https://youtu.be/vJkzU3V8Q2o "><img src="images/Icon/youtube%C2%A0—%20копия.svg" alt="" width="17"></a>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-content d-flex flex-row align-items-center justify-content-center">
+
+            <div class=" d-sm-flex flex-md-row flex-sm-column w-100 container">
+                <div class="our-contacts d-flex flex-column justify-content-start align-items-start col-md-6 col-sm-12">
+                    <h1>КОНТАКТЫ</h1>
+                    <p>Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь с нами</p>
+                    <div class="d-flex flex-row align-items-start mt-2">
+                        <img class="mr-1 mt-1" src="images/Icon/place.svg" alt="" width="15">
+                        <a class="text-content" href="">г. Астана, ул. Кунаева 8, А3<br> "Изумрудный квартал", Блок "Б".</a><br>
+                    </div>
+                    <div class="d-flex flex-row align-items-start mt-2">
+                        <img class="mr-1 mt-1" src="images/Icon/place.svg" alt="" width="15">
+                        <a class="text-content" href="">г. Астана, ул. Кунаева 8, А3<br> "Изумрудный квартал", Блок "Б".</a><br>
+                    </div>
+                    <div class="d-flex flex-row align-items-start mt-2">
+                        <img class="mr-1 mt-1" src="images/Icon/place.svg" alt="" width="15">
+                        <a class="text-content" href="">info.atameken.kz</a><br>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="write-us-frame d-flex flex-column justify-content-between px-5">
+                        <h1>НАПИШИТЕ НАМ</h1>
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Электронная почта">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Введите ваше сообщение..."></textarea>
+                        <button class="border-0">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map w-100">
+            <div id="map" style="width:100%;height:30rem"></div>
+            <!--<div id="map" style="width: 600vw; height: 400px"></div>-->
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer d-flex flex-column align-items-center pt-5">
+    <div class="footer-nav d-md-flex d-sm-flex flex-md-row flex-sm-column container">
+        <div class="col-md-3 col-sm-12 d-flex align-items-start justify-content-start"><img src="images/Icon/Logoblue.svg" alt="" width="180"></div>
+        <div class="col-md-3 col-sm-12">
+            <p class="text-title m-0">Разделы</p>
+            <a class="text-content" href="">Главная</a><br>
+            <a class="text-content" href="">Наши проекты</a><br>
+            <a class="text-content" href="">Направления</a><br>
+            <a class="text-content" href="">Новости</a>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <p class="text-title m-0">О нас</p>
+            <a class="text-content" href="">Цели</a><br>
+            <a class="text-content" href="">Компании</a><br>
+            <a class="text-content" href="">Партнеры</a><br>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <p class="text-title m-0">Связаться с нами</p>
+            <img class="mr-2" src="images/Icon/telephone.svg" alt="" width="15"><a class="text-content" href="">+ 7 (727) 398 60 29</a><br>
+            <div class="d-flex flex-row align-items-start">
+                <img class="mr-2 mt-2" src="images/Icon/place.svg" alt="" width="15">
+                <a class="text-content" href="">г. Астана, ул. Кунаева 8, А3<br> "Изумрудный квартал", Блок "Б".</a><br>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-line w-100"></div>
+    <div class="all-rights d-md-flex d-sm-flex flex-md-row flex-sm-column justify-content-between align-items-center m-auto container">
+        <p>© 2018 ОО «Менің Атамекенім». Все права защищены.</p>
+        <div>
+            <img class="mx-2" src="images/Icon/profile.svg" alt="" width="15">
+            <img class="mx-2" src="images/Icon/profile.svg" alt="" width="15">
+            <img class="mx-2" src="images/Icon/profile.svg" alt="" width="15">
+            <img class="mx-2" src="images/Icon/profile.svg" alt="" width="15">
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
+
+<script>
+    var showdemo = angular.module('showdemo', [])
+
+        .controller('ShowController', function($scope) {
+            $scope.name = 'main';
+            $scope.suggestions = [
+                {title:'Обустройство ЖКХ',img:"images/Icon/village.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title:'Культурный центр',img:"images/Icon/drama.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title:'Бизнес-среда',img:"images/Icon/suitcase.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title: 'Медикаменты в больницу',img:"images/Icon/doctor.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title: 'Спортивное поле',img:"images/Icon/ball.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title: 'Туристические тропы',img:"images/Icon/location.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title: 'Экология села',img:"images/Icon/green.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title: 'Телефонная сеть',img:"images/Icon/telephone1.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+                {title: 'Транспортная развязка',img:"images/Icon/rent-a-car.svg", place: 'Село Карабулак, Сайрамский район', cost: '50 000 000 т'},
+            ]
+        })
+    .controller('ShowController2', function($scope) {
+        $scope.newsblock = 'all';
+    });
+
+    $( '#topheader .navbar-nav a' ).on( 'click', function () {
+        $( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+        $( this ).parent( 'li' ).addClass( 'active' );
+    });
+
+
+    // многоточие
+    var myTag = $('.truncate').text();
+    if (myTag.length > 100) {
+        var truncated = myTag.trim().substring(0, 160).split(" ").slice(0, -1).join(" ") + "…";
+        $('.truncate').text(truncated);
+    }
+
+
+
+    var myMap;
+
+    // Waiting for the API to load and DOM to be ready.
+    ymaps.ready(init);
+
+    function init () {
+        /**
+         * Creating an instance of the map and binding it to the container
+         * with the specified ID ("map").
+         */
+        myMap = new ymaps.Map('map', {
+            /**
+             * When initializing the map, you must specify
+             * its center and the zoom factor.
+             */
+            center: [55.76, 37.64], // Moscow
+            zoom: 10
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+        document.getElementById('destroyButton').onclick = function () {
+            // To destroy it, the "destroy" method is used.
+            myMap.destroy();
+        };
+
+    }
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
+
+
+<!--AIzaSyDmF8VySK2VSEcdzMKM9SfmXSENZ3ZO2Hc-->

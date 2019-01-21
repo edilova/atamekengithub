@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="34px" viewBox="0 0 26 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Point</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contacts" transform="translate(-759.000000, -460.000000)" fill="#FFEE2E">
+            <g id="Point" transform="translate(758.000000, 460.000000)">
+                <path d="M13.97,0.01 C6.811,0.01 0.987,5.625 0.987,12.526 C0.987,14.326 1.37,16.046 2.122,17.639 C5.369,24.485 11.593,31.717 13.423,33.769 C13.559,33.922 13.761,34.012 13.97,34.012 C14.181,34.012 14.381,33.922 14.518,33.769 C16.347,31.717 22.571,24.487 25.818,17.639 C26.571,16.046 26.954,14.326 26.954,12.526 C26.953,5.625 21.128,0.01 13.97,0.01 L13.97,0.01 L13.97,0.01 Z M13.97,19.03 C10.251,19.03 7.225,16.111 7.225,12.526 C7.225,8.941 10.251,6.025 13.97,6.025 C17.688,6.025 20.714,8.941 20.714,12.526 C20.714,16.111 17.688,19.03 13.97,19.03 L13.97,19.03 L13.97,19.03 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

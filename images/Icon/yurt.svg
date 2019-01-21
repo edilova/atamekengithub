@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFF5E3;}
+	.st1{fill:#FDE6C0;}
+	.st2{fill:#FCD18B;}
+	.st3{fill:#FABA51;}
+	.st4{fill:#094D83;}
+	.st5{fill:#37AE77;}
+</style>
+<polygon class="st0" points="234.8,0 234.8,180 0,150 213.5,0 "/>
+<polygon class="st1" points="512,150 277.2,180 277.2,0 298.5,0 "/>
+<polygon class="st2" points="277.2,0 384,150 226,180 256,0 "/>
+<polygon class="st1" points="256,0 256,180 128,150 234.8,0 "/>
+<polygon class="st3" points="256,150 226,210 512,180 512,150 "/>
+<polygon class="st2" points="256,150 256,210 0,180 0,150 "/>
+<polygon class="st0" points="256,180 226,353.5 512,323.5 512,180 "/>
+<polygon class="st0" points="0,180 0,323.5 256,353.5 256,180 "/>
+<polygon class="st1" points="256,323.5 256,457 0,437 0,323.5 "/>
+<g>
+	<polygon class="st2" points="512,323.5 512,437 256,457 256,323.5 	"/>
+	<polygon class="st4" points="256,210 326.2,210 326.2,255 226,285 	"/>
+</g>
+<polygon class="st4" points="256,210 185.8,210 185.8,255 256,285 "/>
+<polygon class="st5" points="256,255 226,452 326.2,452 326.2,255 "/>
+<rect x="185.8" y="255" class="st5" width="70.2" height="197"/>
+<rect x="256" y="437" class="st4" width="256" height="30"/>
+<rect y="437" class="st4" width="256" height="30"/>
+</svg>

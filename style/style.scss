@@ -1,0 +1,16 @@
+.navbar{
+  background-color: transparent;
+}
+.text-red{
+  color: red!important;
+}
+.navbar-nav .nav-link:hover,.navbar-nav .nav-link:active{
+  color: red!important;
+  background-color: yellow;
+}
+.nav-bt{
+  border: none;
+  color: red!important;
+  background-color: red;
+
+}
